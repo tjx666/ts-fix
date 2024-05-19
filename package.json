@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.0.1",
   "license": "MIT",
   "main": "dist/index.js",
   "bin": "dist/cli.js",
@@ -15,11 +15,19 @@
     "start": "tsc -p . --watch",
     "build": "tsc -p . && tsc -p test",
     "test": "jest",
-    "prepare": "tsc -p ."
+    "prepare": "tsc -p .",
+    "prepublishOnly": "npm run build"
   },
-  "name": "ts-fix",
-  "private": true,
-  "author": "Isabel Duan",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "name": "@yutengjing/ts-fix",
+  "author": {
+    "name": "YuTengjing",
+    "url": "https://github.com/tjx666",
+    "email": "ytj2713151713@gmail.com"
+  },
   "devDependencies": {
     "@types/diff": "^5.2.1",
     "@types/inquirer": "^8.2.1",
